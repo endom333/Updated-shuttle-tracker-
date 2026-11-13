@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Shuttle Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+</head>
+<body>
+
+  <header>
+    <h1>University Shuttle Tracker</h1>
+    <p>Campus Transportation Management</p>
+  </header>
+
+  <main>
+    <section class="stats">
+      <div class="card">
+        <h3>Total Buses</h3>
+        <p id="totalBuses">3</p>
+      </div>
+
+      <div class="card">
+        <h3>Moving</h3>
+        <p id="movingBuses">2</p>
+      </div>
+
+      <div class="card">
+        <h3>Stationary</h3>
+        <p id="stoppedBuses">1</p>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="bus-panel">
+        <h2>Available Shuttle Buses</h2>
+        <div id="busList"></div>
+      </div>
+
+      <div class="details-panel">
+        <h2>Vehicle Information</h2>
+        <div id="busDetails">
+          Select a bus to view its details.
+        </div>
+
+       <div class="map-placeholder">
+    <h3>Live Shuttle Location</h3>
+    <div id="map" style="height: 350px; width: 100%;"></div>
+      </div>
+      </div>
+    </section>
+    <div class="gps-panel">
+  <h2>Driver GPS Tracking</h2>
+
+  <p id="gpsStatus">GPS not started</p>
+
+  <button id="startTracking">
+    Start Tracking
+  </button>
+
+  <button id="stopTracking" disabled>
+    Stop Tracking
+  </button>
+
+  <div class="coordinates">
+    <p>Latitude: <span id="latitude">Waiting...</span></p>
+
+    <p>Longitude: <span id="longitude">Waiting...</span></p>
+
+    <p>GPS Accuracy: <span id="accuracy">Waiting...</span></p>
+  </div>
+</div>
+  </main>
+
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
